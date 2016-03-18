@@ -1,0 +1,40 @@
+---
+---
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <meta charset="UTF-8">
+    <title>Triangle TechGirlz GitHub Project by jasonrudolph</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="stylesheets/normalize.css" media="screen">
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" type="text/css" href="stylesheets/stylesheet.css" media="screen">
+    <link rel="stylesheet" type="text/css" href="stylesheets/github-light.css" media="screen">
+  </head>
+  <body>
+    <section class="page-header">
+      <h1 class="project-name">Triangle TechGirlz GitHub Project</h1>
+      <h2 class="project-tagline">March 2016</h2>
+      <a href="https://github.com/jasonrudolph/triangle-techgirlz-project" class="btn">View on GitHub</a>
+    </section>
+
+    <section class="main-content">
+      <h2>
+        <a id="welcome-to-github-pages" class="anchor" href="#welcome-to-github-pages" aria-hidden="true"> <span aria-hidden="true" class="octicon octicon-link"></span></a>
+        Recommended Movies
+      </h2>
+      <p>Looking for a good movie? The <a href="https://www.eventbrite.com/e/triangle-techgirlz-collaborate-on-projects-with-git-github-tickets-21414162336?aff=efbneb">March 2016 Triangle TechGirlz workshop</a> participants think you'll love these choices. Enjoy!</p>
+
+      {% for person_hash in site.data.people %}
+      {% assign person = person_hash[1] %}
+      <h3>
+        <a id="welcome-to-github-pages" class="anchor" href="#welcome-to-github-pages" aria-hidden="true"> <span aria-hidden="true" class="octicon octicon-link"></span></a>
+        {{ person.movie }}
+      </h3>
+      <p class="recommended-by">Recommended by <a href="https://github.com/{{ person.username }}">{{ person.name }} </a></p>
+      {% endfor %}
+
+    </section>
+
+  </body>
+</html>
